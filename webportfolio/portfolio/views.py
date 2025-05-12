@@ -1,20 +1,18 @@
 from django.shortcuts import render, redirect
+from collections import defaultdict
 from .models import Section, Document, ContactInfo
-#from .forms import ContactForm
 
 def index(request):
     sections = Section.objects.all()
     documents = Document.objects.all()
-    contact_info = ContactInfo.objects.first()  # Expecting only one record
+    contact_info = ContactInfo.objects.first()
+
+    grouped_sections = defaultdict(list)
+    for sec in sections:
+        grouped_sections[sec.section_type].append(sec)
+
     return render(request, 'portfolio/index.html', {
-        'sections': sections,
+        'grouped_sections': grouped_sections,
         'documents': documents,
         'contact_info': contact_info,
     })
-
-#def submit_contact(request):
-#    if request.method == 'POST':
-#        form = ContactForm(request.POST)
-#        if form.is_valid():
-#            form.save()
-#    return redirect('index')
