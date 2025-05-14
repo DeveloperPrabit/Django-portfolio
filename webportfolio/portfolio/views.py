@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from collections import defaultdict
 from .models import Section, Document, ContactInfo
 
