@@ -25,6 +25,8 @@ class Document(models.Model):
         return self.name
 
 class ContactInfo(models.Model):
+    name = models.CharField(max_length=100, default='Sambeg Khatiwada')
+    logo = models.ImageField(upload_to='logos/', blank=True, null=True)
     address = models.CharField(max_length=255)
     website = models.URLField()
     email = models.EmailField()
