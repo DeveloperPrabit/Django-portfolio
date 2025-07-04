@@ -29,7 +29,6 @@ def index(request):
         'hero_section': hero_section,
     })
 
-
 def section_detail(request, section_type):
     sections = Section.objects.filter(section_type=section_type)
     contact_info = ContactInfo.objects.first()

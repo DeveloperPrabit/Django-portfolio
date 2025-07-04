@@ -2,7 +2,6 @@
 
 from django.db import migrations, models
 
-
 class Migration(migrations.Migration):
 
     dependencies = [
@@ -21,3 +20,4 @@ class Migration(migrations.Migration):
             field=models.CharField(default='Sambeg Khatiwada', max_length=100),
         ),
     ]
+
