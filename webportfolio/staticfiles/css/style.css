@@ -1,3 +1,41 @@
-body { font-family: Arial; margin: 0; padding: 0; }
-header nav ul { list-style: none; display: flex; gap: 10px; }
-section { padding: 40px; border-bottom: 1px solid #ddd; }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Sky blue background with white text */
+.bg-sky {
+  background-color: blue !important; /* Brighter Bootstrap-style sky blue */
+  color: white !important;
+}
+
+/* Navbar links white by default and smooth hover */
+.navbar .nav-link {
+  color: white !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #e6e6e6 !important;
+}
+
+/* Navbar brand/logo text */
+.navbar-brand {
+  color: white !important;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Logo image sizing (optional override) */
+.navbar-brand img {
+  height: 60px;
+  max-height: 60px;
+  object-fit: contain;
+}

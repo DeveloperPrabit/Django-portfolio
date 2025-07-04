@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Security settings
 SECRET_KEY = 'django-insecure-7k&8k#t#!0o(z0+oqbt^x@fv98p6l94%n1-yd^i8)am$oi2lxz'
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sambegkhatiwada.com', 'www.sambegkhatiwada.com']
 
 # Installed apps
 INSTALLED_APPS = [

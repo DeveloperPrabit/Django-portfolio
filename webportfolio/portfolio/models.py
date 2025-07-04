@@ -17,6 +17,7 @@ class Section(models.Model):
     def __str__(self):
         return self.title
 
+
 class Document(models.Model):
     name = models.CharField(max_length=100)
     file = models.FileField(upload_to='documents/')
@@ -24,7 +25,10 @@ class Document(models.Model):
     def __str__(self):
         return self.name
 
+
 class ContactInfo(models.Model):
+    name = models.CharField(max_length=100, default='Sambeg Khatiwada')
+    logo = models.ImageField(upload_to='logos/', blank=True, null=True)
     address = models.CharField(max_length=255)
     website = models.URLField()
     email = models.EmailField()
@@ -37,3 +41,15 @@ class ContactInfo(models.Model):
 
     def __str__(self):
         return "Contact Info"
+
+
+class HeroSection(models.Model):
+    title = models.CharField(max_length=255, help_text="Main heading (e.g. Welcome to my site)")
+    subtitle = models.TextField(help_text="Short description or tagline")
+
+    class Meta:
+        verbose_name = "Hero Section"
+        verbose_name_plural = "Hero Section"
+
+    def __str__(self):
+        return "Hero Section Content"
